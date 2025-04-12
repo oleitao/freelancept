@@ -1,20 +1,73 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Remote Freelancer from Portugal 🇵🇹
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Simulate your earnings (year, month or day) and breakdown how much taxes you're going to pay as a freelancer working from Portugal.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+live at https://freelancept.pedromoleitao.com/
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+![preview](img/preview.gif)
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Contributing
+
+Contributions are welcome. Although I enjoy helping people with their financial burdens, I do have limited time to work on this. Feel free to open an issue or submit a pull request. If you're not sure where to start, mention me in the comments!
+
+## Local setup (with node)
+
+### Instal dependencies
+
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+
+```
+npm run dev
+```
+
+### Compiles and minifies for production
+
+```
+npm run build
+```
+
+### Tests
+
+**vitest**
+
+```
+npm run vitest
+```
+
+**cypress end to end**
+
+open:
+
+```
+npm run cy:e2e:open
+```
+
+run:
+
+```
+npm run cy:e2e:run
+```
+
+## Local setup (with docker)
+
+run as dev (with auto-reload):
+
+```
+docker compose up --build -V
+```
+
+build a production image (image named as `remotefreelancept:latest`) (listening on `:80`):
+
+```
+docker build -t remotefreelancept:latest .
+```
+
+Run tests (vitest):
+
+```
+docker build -t remotefreelancept:test --target=test .
+```
